@@ -1,5 +1,5 @@
 import "./App.css";
-import DessertsList from "./components/DessertsList"
+import DessertsList from "./components/DesertsList"
 const desserts = [
   {
     name: "Chocolate Cake",
