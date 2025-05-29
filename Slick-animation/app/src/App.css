@@ -1,0 +1,361 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0 auto;
+}
+.nav a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.nav a:hover{
+    color: rgba(0, 0, 0, 0.6);
+}
+
+
+/* ! Slider1 */
+  .container1{
+    width: 90%;
+    margin: 40px auto;
+  }
+  .img-container1{
+    height: 700px;
+  }
+  .img-container1 img{
+    width: 100%;
+    object-fit: cover;
+    -webkit-object-fit: cover;
+    -o-object-fit: cover;
+    -moz-object-fit:cover;
+    -ms-object-fit: cover;
+    object-position: 50% 50%;
+    -moz-object-position: 50% 50%;
+    -webkit-object-position: 50% 50%;
+    -ms-object-position: 50% 50%; 
+    -o-object-position: 50% 50%; 
+  }
+
+  .container1 .slick-arrow::before{
+    color:  #FE7743;
+    padding: 5px;
+    font-size: 30px !important;
+  }
+  .container1 .slick-list{
+    width: 95%;
+    margin: 0 auto;
+  
+  }
+  @media screen and (max-width: 1000px) {
+    .img-container1{
+      height: 500px;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .img-container1{
+      height: 400px;
+    }
+    .container1 .slick-next{
+      transform: translate(-90%, -50%) !important;
+      -o-transform: translate(-90%, -50%) !important;
+      -ms-transform: translate(-90%, -50%) !important;
+      -webkit-transform: translate(-90%, -50%) !important;
+      -moz-transform: translate(-90%, -50%) !important;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .img-container1{
+      height: 300px;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .img-container1{
+      height: 200px;
+    }
+  }
+  @media screen and (max-width: 250px) {
+    .img-container1{
+      height: 150px;
+    }
+  }
+
+
+/* ! Slider2 */
+
+  .container2{
+    width: 90%;
+    margin: 40px auto;
+  }
+  .img-container2{
+    height: 700px;
+  }
+  .img-container2 img{
+    width: 100%;
+    object-fit: cover;
+    -webkit-object-fit: cover;
+    -o-object-fit: cover;
+    -moz-object-fit:cover;
+    -ms-object-fit: cover;
+    object-position: 50% 50%;
+    -moz-object-position: 50% 50%;
+    -webkit-object-position: 50% 50%;
+    -ms-object-position: 50% 50%; 
+    -o-object-position: 50% 50%; 
+  }
+  .container2 .arrow{
+    width: 30px !important;
+  }
+  .container2 .arrow img {
+    width: 100%;
+  }
+  .container2 .arrow.next{
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translate(30%, -50%);
+    -o-transform: translate(30%, -50%);
+    -ms-transform: translate(30%, -50%);
+    -webkit-transform: translate(30%, -50%);
+    -moz-transform: translate(30%, -50%);
+  }
+  .container2 .arrow.prev{
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translate(-30%, -50%);
+    -o-transform: translate(-30%, -50%);
+    -ms-transform: translate(-30%, -50%);
+    -webkit-transform: translate(-30%, -50%);
+    -moz-transform: translate(-30%, -50%);
+  }
+  .container2 .slick-list{
+    width: 95%;
+    margin: 0 auto;
+  }
+  .container2 .slick-dots {
+    margin: -50px 0;
+   }
+  .container2 .slick-dots li{
+    width: 50px;
+    opacity: 0.5;
+  }
+  .container2 .slick-dots li.slick-active{
+    opacity: 1;
+    width: 59px;
+    transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -moz-trasition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+  }
+  .container2 .custom-dots img{
+    width: 100%;
+  }
+  @media screen and (max-width: 1000px) {
+    .img-container2{
+      height: 500px;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .img-container2{
+      height: 400px;
+    }
+    .container2 .slick-next{
+      transform: translate(-90%, -50%) !important;
+      -o-transform: translate(-90%, -50%) !important;
+      -ms-transform: translate(-90%, -50%) !important;
+      -webkit-transform: translate(-90%, -50%) !important;
+      -moz-transform: translate(-90%, -50%) !important;
+    }
+  }
+  @media screen and (max-width: 600px) {
+   .container2  .img-container2{
+      height: 300px;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .container2 .img-container2{
+      height: 200px;
+    }
+  }
+  @media screen and (max-width: 250px) {
+   .container2  .img-container2{
+      height: 150px;
+    }
+  } 
+
+  /* ! Slider3 */
+  
+  .container3{
+    width: 90%;
+    margin: 50px auto;
+  }
+  .img-container3{
+    box-shadow: 1px 1px 10px black;
+    border-radius: 20px;
+    margin: 50px auto;
+  }
+  .img-container3 img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    height: 200px;
+  }
+  .description3{
+    padding: 10px;
+  }
+  .container3 .slick-slide > div{
+    width: 300px ;
+    margin: 0 auto;
+  }
+  .container3 .slick-list{
+    width: 100% !important;
+    padding-top: 20px !important;
+  }
+  
+  .container3 .slick-arrow::before{
+    color: #213448;
+    padding: 5px;
+    font-size: 30px !important;
+  }
+  @media screen and (max-width: 1050px) {
+    .container3 .slick-slide > div{
+      width: 250px;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .container3 .slick-next{
+      transform: translate(-90%, -50%) !important;
+      -o-transform: translate(-90%, -50%) !important;
+      -ms-transform: translate(-90%, -50%) !important;
+      -webkit-transform: translate(-90%, -50%) !important;
+      -moz-transform: translate(-90%, -50%) !important;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .container3 .slick-slide > div{
+      width: 300px ;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .container3 .slick-slide > div{
+      max-width: 250px ;
+    }
+  }
+  @media screen and (max-width: 300px) {
+    .container3 .slick-slide > div{
+      max-width: 200px ;
+    }
+  }
+/* ! Vertical Carousel */
+
+.card-container{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #183B4E;
+  border-radius: 10px;
+
+  padding: 15px;
+}
+
+.img-container{
+  width: 400px;
+}
+img{
+  width: 100%;
+  border-radius: 10px;
+}
+.description{
+  padding: 20px; 
+  color: #F3F3E0;
+  line-height: 30px;
+  font-size: 18px;
+}
+.slick-slide > div{
+  width: 90% ;
+  margin: 29px auto;
+  display: flex !important;
+}
+.slick-list{
+  width: 100% !important;
+  padding-top: 20px !important;
+  height: 635px !important;
+}
+.slick-vertical .slick-slide .card-container{
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.slick-arrow::before{
+  color: #183B4E;
+  padding: 5px;
+  font-size: 30px !important;
+}
+
+@media screen and (min-width: 1900px ) {
+  .slick-slider {
+    width: 1300px; 
+    margin: 0 auto;
+  } 
+}
+@media screen and (max-width: 1899px) {
+  .slick-slider {
+    width: 80%; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+  } 
+}
+@media screen and (max-width: 1200px) {
+  .slick-list{
+    height: 480px !important;
+  }
+}
+@media screen and (max-width: 900px) {
+  .slick-vertical .slick-slide .card-container{
+    flex-direction: column;
+  }
+  .slick-list{
+    height: 520px !important;
+  }
+  .slick-slide > div{
+    margin: 29px auto;
+  }
+}
+@media screen and (max-width: 550px){
+  .img-container{
+    width: 90%;
+  }
+  .description{
+    padding: 10px; 
+    line-height: 25px;
+    font-size: 16px;
+  }
+  .slick-list{
+    height: 430px !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  .slick-list{
+    height: 450px !important;
+  }
+  .description{ 
+    line-height: 20px;
+    font-size: 15px;
+  }
+}
