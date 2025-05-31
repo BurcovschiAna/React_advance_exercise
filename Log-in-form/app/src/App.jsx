@@ -10,22 +10,24 @@ export default function App (){
       <div className="flex">
         
         <div className="item">
+          
             <input type="text" id="user" required onChange={e => setUser(e.target.value)}/>
             <span className="material-symbols-outlined">person</span>
             <label htmlFor="user">Username</label>
+            <div className="line user-line"></div>
         </div>
         
         <div className="item">
             <input type="text" id="password" required onChange={e => setPassword(e.target.value)}/>
             <span className="material-symbols-outlined">visibility_off</span>
-            <label htmlFor="password">Password</label>   
+            <label htmlFor="password">Password</label> 
+            <div className="line password-line"></div>  
         </div>
-        
       </div>
 {/* <span class="material-symbols-outlined">
 visibility
 </span> */}
-      <button type="submit" disabled={disabled}>Log In</button>
+      <button type="submit" disabled={!disabled}>Log In</button>
     </form>
     </div>
   )
