@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+body{
+    /* background: rgba(0, 0, 0, 0.859); */
+    background: #FFF2EB;
+}
+.container{
+    max-width: 500px;
+    margin: 20px auto;
+    /* background-color: black; */
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* position: relative; */
+    /* background-color: red; */
+}
+.item{
+    position: relative;
+    /* background-color: red; */
+    border-radius: 10px 0 0 10px;
+  
+}
+
+/* @keyframes shadowMove {
+    0% {
+        box-shadow: -2px 0 0 black;
+    }
+    50% {
+        box-shadow: -2px -2px 0 black; 
+    }
+    
+    100% {
+        box-shadow: -2px -2px 0px black; 
+    }
+} */
+
+@keyframes shadowMove {
+    0% {
+        box-shadow: -3px 0px  black; /* Shadow at bottom left */
+    }
+    25%{
+        box-shadow: -3px 3px  black;
+    }
+    100% {
+        box-shadow: -20px -20px  black; /* Shadow moves to top left */
+    }
+    
+}
+.item:nth-child(1)::after{
+    content: "";
+   animation: shadowMove 1s 10 alternate backwards;
+   box-shadow: -2px -2px 0px black; 
+}
+.item:nth-child(2){
+    
+}
+label, .material-symbols-outlined{ 
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.material-symbols-outlined{
+    left: 10px;
+}
+label{
+     left: 80px;
+     font-size: 18px; 
+    transition: all .5s ease-in-out;
+}
+input{
+    background-color: rgba(0, 0, 0, 0.563);
+    padding:  20px 20px 20px 40px;
+    
+    border-radius: 0 10px 10px 0;
+    border: none;
+    outline: none;  
+    font-size: 16px;
+    width: 76%;
+}
+#user{
+    border-radius: 10px 0 0 10px;
+}
+input:focus ~ label, input:valid ~ label{
+   top: 10px;
+   left: 50px;
+   font-size: 15px;
+}
+
+
+
+button{
+    width: 100%;
+    margin-top: 30px;
+    border: none;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
