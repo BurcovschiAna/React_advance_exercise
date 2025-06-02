@@ -6,14 +6,42 @@ export default function App() {
   const [password, setPassword] = useState(null);
   const [disabled, setDisabled] = useState(true);
   const [visible, setVisible] = useState(false);
+  const [userData, setUserData] = useState([]);
 
+  // Effect to enable/disable the login button
   useEffect(() => {
     setDisabled(!(user && password)); 
   }, [user, password]);
 
+const fetchData = () => {
+  fetch(`/data.json`)
+    .then((response) => response.json()) 
+      .then((jsonData) => setUserData(jsonData))
+      .catch((error) => console.log(error)); 
+};
+
+  useEffect(() => {
+    fetchData();
+    
+    
+  }, []);
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(userData);
+    // Check if the entered username and password match any user in userData
+    const loggedInUser = userData.find(u => u.username === user && u.password === password);
+    if (loggedInUser) {
+      alert(`Welcome, ${loggedInUser.name}!`);
+    } else {
+      alert("Invalid username or password");
+    }
+  };
+
   return (
     <div className="container">
-      <form autoComplete="off">
+      <form autoComplete="off" onSubmit={handleSubmit}>
         <div className="flex">
           <div className="item">
             <input
