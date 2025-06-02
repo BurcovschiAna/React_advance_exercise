@@ -1,34 +1,51 @@
-import { useState, useEffect } from "react"
-import "./App.css"
-export default function App (){
+import { useState, useEffect } from "react";
+import "./App.css";
+
+export default function App() {
   const [user, setUser] = useState(null);
   const [password, setPassword] = useState(null);
   const [disabled, setDisabled] = useState(true);
-  return(
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    setDisabled(!(user && password)); 
+  }, [user, password]);
+
+  return (
     <div className="container">
-    <form autoComplete="off">
-      <div className="flex">
-        
-        <div className="item">
-          
-            <input type="text" id="user" required onChange={e => setUser(e.target.value)}/>
+      <form autoComplete="off">
+        <div className="flex">
+          <div className="item">
+            <input
+              type="text"
+              id="user"
+              required
+              onChange={e => setUser(e.target.value)}
+            />
             <span className="material-symbols-outlined">person</span>
             <label htmlFor="user">Username</label>
             <div className="line user-line"></div>
+          </div>
+
+          <div className="item">
+            <input
+              type={visible ? "text" : "password"}
+              id="password"
+              required
+              onChange={e => setPassword(e.target.value)}
+            />
+            <span
+              className="material-symbols-outlined"
+              onClick={() => setVisible(!visible)}
+            >
+              {visible ? "visibility" : "visibility_off"}
+            </span>
+            <label htmlFor="password">Password</label>
+            <div className="line password-line"></div>
+          </div>
         </div>
-        
-        <div className="item">
-            <input type="text" id="password" required onChange={e => setPassword(e.target.value)}/>
-            <span className="material-symbols-outlined">visibility_off</span>
-            <label htmlFor="password">Password</label> 
-            <div className="line password-line"></div>  
-        </div>
-      </div>
-{/* <span class="material-symbols-outlined">
-visibility
-</span> */}
-      <button type="submit" disabled={!disabled}>Log In</button>
-    </form>
+        <button type="submit" disabled={disabled}>Log In</button>
+      </form>
     </div>
-  )
+  );
 }

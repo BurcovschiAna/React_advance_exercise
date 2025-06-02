@@ -5,12 +5,12 @@
     color: white;
 }
 body{
-    background: rgba(0, 0, 0, 0.859);
+    background: #333446;
     /* background: #FFF2EB; */
 }
 .container{
-    max-width: 500px;
-    margin: 20px auto;
+    max-width: 540px;
+    margin: 20% auto 0;
     /* background-color: black; */
 }
 .flex{
@@ -21,52 +21,54 @@ body{
 }
 .item{
     position: relative;
-    /* background-color: red; */
-    width: 49.6%;
+    width: 49.5%;
   
 }
   .line{
     position: absolute;
     top: -2px;
-    width: 0;
-    height: 0;
+    /* width: 0;
+    height: 0; */
     z-index: -1;
-    background-color: red;
+    background-color: #7F8CAA;
+    
   }
  .line.user-line{
     right: 0px;
     border-radius: 10px 0;
+    clip-path: polygon(0 0, 0 100%, 1% 100%, 2% 9%, 100% 9%, 100% 0);
  }
  .line.password-line{
     left: 0px;
     border-radius: 0 10px;
+   clip-path: polygon(0 0, 100% 0, 100% 100%, 99% 100%, 99% 15%, 0 15%);
  }
 @keyframes line-on {
     0%{
-        height: 5px;
+        height: 20px;
         width: 0px;
     }
     50%{
-        height: 5px;
-        width: 250px;
+        height: 20px;
+        width: 270px;
     }
 
     100%{
-        width: 250px;
-        height: 60px;
+        width: 270px;
+        height: 80px;
     }
 }
 @keyframes line-off {
     0%{
-         width: 250px;
-        height: 59px;
+        width: 270px;
+        height: 80px;
     }
     50%{
-         height: 5px;
-        width: 250px;
+         height: 20px;
+        width: 270px;;
     }
     100%{
-        height: 5px;
+         height: 20px;
         width: 0px;
     }
 }
@@ -74,6 +76,7 @@ label, .material-symbols-outlined{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    user-select: none;
 }
 .material-symbols-outlined{
     left: 10px;
@@ -84,41 +87,42 @@ label{
     transition: all .5s ease-in-out;
 }
 input{
-    background-color: rgb(0, 0, 0);
-    padding:  20px 20px 20px 40px;
+    background-color: #222831;
+    padding:  30px 20px 30px 45px;
     
     border-radius: 0 10px 0px 0;
     border: none;
     outline: none;  
-    font-size: 16px;
+    font-size: 18px;
     width: 76%;
 }
 #user{
     border-radius: 10px 0 0 0px;
 }
 input:focus ~ label, input:valid ~ label{
-   top: 10px;
+   top: 13px;
    left: 50px;
    font-size: 15px;
 }
 
 input:focus ~ .line, input:valid ~ .line{
     animation: line-on 1s 1 alternate backwards;
-    width: 250px;
-    height: 60px;
+    width: 270px;
+    height: 83px;
 }
 input ~ .line{
-    animation: line-off 0.5s 1 alternate backwards;
+    animation: line-off .5s 1 alternate backwards;
 }
 button{
+    display: block;
     width: 100%;
     border: none;
     font-size: 18px;
     padding: 10px 20px;
-    background-color: red;
-    color: white;
+    background-color: #7F8CAA;
     border-radius: 0 0 10px 10px;
 }
 button:disabled{
+    display: none;
    background-color: rgb(0, 0, 0);
 }
