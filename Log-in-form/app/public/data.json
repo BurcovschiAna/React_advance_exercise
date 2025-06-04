@@ -3,12 +3,24 @@
         "name": "Ana",
         "surname": "Burcovschi",
         "username": "AnaB",
-        "password": "text"
+        "password": "user1"
     },
     {
         "name": "Alex",
         "surname": "Mrejeru",
-        "username": "speedy",
-        "password": "Ana-iubeste-mai-tare"
+        "username": "AlexM",
+        "password": "user2"
+    },
+    {
+        "name": "Vitalie",
+        "surname": "Burcovschi",
+        "username": "VitalieB",
+        "password": "user3"
+    },
+    {
+        "name": "Elena",
+        "surname": "Burcovschi",
+        "username": "ElenaB",
+        "password": "user4"
     }
 ]
